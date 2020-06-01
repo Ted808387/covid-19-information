@@ -1,0 +1,72 @@
+$head-color: #15B2EB;
+$nav-color: #118BB8;
+$sidebar-color: #92e3e9;
+$sidebar-hover-color: #2d7c81;
+$main-color: #25586B;
+$main-card-color: #c4f3ed;
+$footer-color: #15B2EB;
+$bcg-color-white: #fff;
+$scroll-color: rgb(24, 60, 73);
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import '_nav.scss';
+@import '_sidebar.scss';
+@import '_main.scss';
+@import '_footer.scss';
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Russo One', sans-serif;
+}
+.container{
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  grid-template-rows: 0.3fr repeat(3, 1fr) 1fr;
+  grid-template-columns: repeat(5, minmax(120px, 1fr));
+  grid-template-areas:
+  'head head head head head'
+  'sidebar main main main main'
+  'sidebar main main main main'
+  'sidebar main main main main'
+  'sidebar footer footer footer footer';
+  row-gap: 5px;
+  column-gap: 5px;
+}
+.header{
+  grid-area: head;
+  background-color: $head-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  position: relative;
+}
+.sidebar{
+  grid-area: sidebar;
+  background-color: $nav-color;
+}
+.main{
+  grid-area: main;
+  background-color: $main-color;
+}
+.footer{
+  grid-area: footer;
+  background-color: $footer-color;
+}
+@media only screen and (max-width: 550px) {
+  .container{
+    grid-template-rows: 0.4fr 605px 3fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'head'
+    'sidebar'
+    'main'
+    'footer'
+  }
+}

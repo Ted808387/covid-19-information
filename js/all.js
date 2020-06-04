@@ -1,6 +1,9 @@
 import './change.js';
 import './controller.js';
 
+// API 各國紀錄 : https://disease.sh/v2/historical?lastdays=30  
+// API 全球紀錄 : https://disease.sh/v2/historical/all?lastdays=30
+// 來源 : https://disease.sh/
 
 // let Card = document.querySelector('.sidebar-content');
 // let mainCountry = document.querySelector('.main');

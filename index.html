@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEST</title>
     <link rel="stylesheet" href="./dist/style/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="./js/all.js" type="module"></script>
 </head>
 <body>
@@ -37,71 +38,6 @@
         </header>
         <aside class="sidebar">
             <div class="sidebar-content">
-                <!-- <div class="sidebar-card"> -->
-                    <!-- <h4>Global</h4>
-                    <div class="card_content">
-                        <div class="card-left">
-                            <p>Total:</p>
-                            <p>deaths:</p>
-                        </div>
-                        <div class="card-right">
-                            <p>100</p>
-                            <p>100</p>
-                        </div>
-                    </div> -->
-                <!-- </div> -->
-                <!-- <div class="sidebar-card">
-                    <h4>country2</h4>
-                    <div class="card_content">
-                        <div class="card-left">
-                            <p>cases:</p>
-                            <p>deaths:</p>
-                        </div>
-                        <div class="card-right">
-                            <p>100</p>
-                            <p>100</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="sidebar-card">
-                    <h4>country3</h4>
-                    <div class="card_content">
-                        <div class="card-left">
-                            <p>cases:</p>
-                            <p>deaths:</p>
-                        </div>
-                        <div class="card-right">
-                            <p>100</p>
-                            <p>100</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="sidebar-card">
-                    <h4>country4</h4>
-                    <div class="card_content">
-                        <div class="card-left">
-                            <p>cases:</p>
-                            <p>deaths:</p>
-                        </div>
-                        <div class="card-right">
-                            <p>100</p>
-                            <p>100</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="sidebar-card">
-                    <h4>country5</h4>
-                    <div class="card_content">
-                        <div class="card-left">
-                            <p>cases:</p>
-                            <p>deaths:</p>
-                        </div>
-                        <div class="card-right">
-                            <p>100</p>
-                            <p>100</p>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </aside>
         <main class="main">
@@ -137,11 +73,13 @@
 
         </main>
         <footer class="footer">
-            <div class="footer-left">
-                <h2>Trends</h2>
+            <div class="footer-chart">
+                <h4 class="chart-title">Global</h4>
+                <canvas id="myChart" height="60%">
+                </canvas>
             </div>
-            <!-- <div class="footer-right">footer-right</div> -->
             <div class="copyright">Copyright&nbsp;&copy&nbsp;2020&nbsp;Ted&nbsp;design</div>
+            <div class="updateTime">2020/06/04</div>
         </footer>
     </div>
 </body>

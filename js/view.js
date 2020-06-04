@@ -4,6 +4,9 @@ export let view = (function() {
         main: '.main',
         mainArray: '.main-content>.main-card',
         Cards: '.sidebar-content>.sidebar-card',
+        myChart: 'myChart',
+        chartTitle: '.chart-title',
+        updateTime: '.updateTime',
     };
     return {
         getInfo: function() {
@@ -11,6 +14,7 @@ export let view = (function() {
                 Card: document.querySelector(Dom.sidebar),
                 mainCountry: document.querySelector(Dom.main),
                 Cards: document.querySelectorAll(Dom.Cards),
+                ctx: document.getElementById(Dom.myChart).getContext('2d'),
             };
         },
         change: function(getData, data) {
@@ -47,6 +51,10 @@ export let view = (function() {
             for(let i = 0; i < mainCards.length; i++) {
                 mainCards[i].childNodes[3].textContent = countryData[i];
             }
+            document.querySelector(Dom.chartTitle).textContent = countryName;
+        },
+        updateTime: function(time) {
+            document.querySelector(Dom.updateTime).textContent = time;
         },
     };
 })();

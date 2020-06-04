@@ -1,19 +1,22 @@
+@mixin footer-data() {
+    font-size: 10px;
+    position: absolute;
+    bottom: 5px;
+}
+
 .footer{
     padding: 10px;
     position: relative;
-}
-.footer-left{
-    width: 30%;
-    float: left;
-}
-.footer-right{
-    width: 70%;
-    float: right;
-}
-.copyright{
-    font-size: 10px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    .footer-chart{
+        padding-bottom: 20px;
+    }
+    .copyright{
+        @include footer-data();
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .updateTime{
+        @include footer-data();
+        right: 10px;
+    }
 }

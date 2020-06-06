@@ -8,7 +8,7 @@ let controller = (function(model, view) {
         view.changeDisplay('Global', model.intoData(data.data.Global));
         getArray('https://api.covid19api.com/world', 'Global');
     };
-    
+
     let chart = new Chart(getDom.ctx, {
         type: 'line',
         data: {
@@ -101,6 +101,20 @@ let controller = (function(model, view) {
         // console.log(555)
     });
 
+    getDom.search.addEventListener('input', function(e) {
+        let searchCountry = data.Country.filter((item) => {
+            return String(item.Country.toLowerCase()).indexOf(e.srcElement.value.toLowerCase()) === 0;
+        }); // 轉換成小寫，只要輸入大小寫都適用
+        getDom.Card.innerHTML = '';
+        if(e.srcElement.value) {
+            view.getCountry(getDom, searchCountry);
+        } else {
+            view.change(getDom, data.data);
+            view.getCountry(getDom, data.Country);
+        }
+        changeMain();
+    })
+
     let xhr = new XMLHttpRequest();
     xhr.open('get', 'https://api.covid19api.com/summary', true);
     xhr.setRequestHeader('Content-type','application/json');
@@ -111,7 +125,6 @@ let controller = (function(model, view) {
             view.change(getDom, data.data);
             model.getCountry();
             // promise;
-            console.log(data.updateTime)
             // model.getTime(); // 更新chart時間
             view.updateTime(data.updateTime);
             view.getCountry(getDom, data.Country);

@@ -1,6 +1,18 @@
 $E00: 100%;
 $peoplenumber: red;
 
+.sidebar-search{
+    width: 100%;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding-left: 3px;
+    margin-bottom: 5px;
+    &:focus{
+        outline: 1px solid #0edceb;
+    }
+    &:focus::-webkit-input-placeholder { color:transparent; }
+}
 .sidebar-content{
     display: flex;
     flex-direction: column;

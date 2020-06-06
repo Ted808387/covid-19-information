@@ -46,7 +46,6 @@ export let model = (function() {
         }).then((jsonData) => {
             let timeSort = jsonData;
             data.updateTime = timeSort[timeSort.length - 1].Date;
-            console.log(data.updateTime)
             timeSort.sort((a, b) => {
                 return a.TotalConfirmed - b.TotalConfirmed;               
             });

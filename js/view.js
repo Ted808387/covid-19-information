@@ -1,6 +1,7 @@
 export let view = (function() {
     let Dom = {
         sidebar: '.sidebar-content',
+        search: '.sidebar-search',
         main: '.main',
         mainArray: '.main-content>.main-card',
         Cards: '.sidebar-content>.sidebar-card',
@@ -15,6 +16,7 @@ export let view = (function() {
                 mainCountry: document.querySelector(Dom.main),
                 Cards: document.querySelectorAll(Dom.Cards),
                 ctx: document.getElementById(Dom.myChart).getContext('2d'),
+                search: document.querySelector(Dom.search),
             };
         },
         change: function(getData, data) {

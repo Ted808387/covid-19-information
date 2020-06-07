@@ -15,9 +15,9 @@ let controller = (function(model, view) {
             labels: data.historyTime,
             datasets: [{
                 label: 'Covid-19 Total death',
-                borderColor: '#ff0000ab',
+                borderColor: '#fc1919',
                 borderWidth: '3',
-                hoverBackgroundColor: '#ff0000ab',
+                hoverBackgroundColor: '#fc1919',
                 hoverBorderColor: 'black',
                 data: data.historyDeaths, // 丟入參數
                 },{

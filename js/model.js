@@ -4,8 +4,6 @@ export let model = (function() {
         Country: [], // 全部城市
         firstCountry: [], // 前幾名城市
         chartData: {}, // chart歷史資料
-        // cases: [], // 全球歷史確診
-        // deaths: [], // 全球歷史死亡
         
         worldHistory: [], //全球資料歷史
         historyData: [], // 各國歷史資料

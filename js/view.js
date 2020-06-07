@@ -7,7 +7,7 @@ export let view = (function() {
         Cards: '.sidebar-content>.sidebar-card',
         myChart: 'myChart',
         chartTitle: '.chart-title',
-        updateTime: '.updateTime',
+        Time: '.Time',
     };
     return {
         getInfo: function() {
@@ -56,7 +56,7 @@ export let view = (function() {
             document.querySelector(Dom.chartTitle).textContent = countryName;
         },
         updateTime: function(time) {
-            document.querySelector(Dom.updateTime).textContent = time;
+            document.querySelector(Dom.Time).textContent = time;
         },
     };
 })();

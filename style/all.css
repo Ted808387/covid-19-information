@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 .nav {
-  width: 300px;
+  width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,12 +10,6 @@
 }
 
 .nav-item {
-  color: white;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.nav-item:hover {
   color: #25586B;
 }
 
@@ -29,12 +23,6 @@
   height: 3px;
   margin-bottom: 3px;
   background-color: #fff;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.nav-burger:hover span {
-  background-color: #25586B;
 }
 
 .popup-nav {
@@ -53,15 +41,15 @@
 .popup-nav .popup-nav-item {
   display: none;
   text-align: center;
-  border-bottom: 1px solid #118BB8;
+  border-bottom: 1px solid #25586B;
   padding: 5px 0;
-  color: #118BB8;
+  color: #25586B;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .popup-nav .popup-nav-item:hover {
-  color: #25586B;
+  color: #f6f8f8;
 }
 
 .popup-nav .popup-nav-item:last-child {
@@ -74,7 +62,7 @@
   border: 1px solid gray;
   border-radius: 3px;
   padding-left: 3px;
-  margin-bottom: 5px;
+  margin: 5px 0;
 }
 
 .sidebar-search:focus {
@@ -94,7 +82,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 93%;
   background-color: #fff;
   overflow: scroll;
   overflow-x: hidden;
@@ -119,7 +107,7 @@
 
 .sidebar-card {
   width: 100%;
-  height: 20%;
+  font-size: 1.6vw;
   padding: 10px 5px;
   margin-bottom: 5px;
   background-color: #92e3e9;
@@ -143,7 +131,7 @@
 .sidebar-card .card-right {
   float: right;
   text-align: right;
-  color: red;
+  color: #fc1919;
 }
 
 .sidebar-card p:first-child {
@@ -161,7 +149,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #fff;
+  color: #25586B;
 }
 
 .main-content {
@@ -195,18 +183,19 @@
 }
 
 .main-card p {
-  font-size: 2.5vw;
+  font-size: 2.2vw;
 }
 
-.main-card h1 {
+.main-card h2 {
   font-size: 32px;
+  color: #fc1919;
   margin: auto 0;
 }
 
 @media only screen and (max-width: 550px) {
   .main-card {
     width: 45%;
-    margin-bottom: 3%;
+    margin-bottom: 4%;
   }
   .main-card h1 {
     font-size: 24px;
@@ -238,6 +227,10 @@
   right: 10px;
 }
 
+.footer .updateTime .Time {
+  display: inline-block;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -260,8 +253,8 @@ i {
   background-color: #fff;
   -ms-grid-rows: 0.3fr (1fr)[3] 1fr;
       grid-template-rows: 0.3fr repeat(3, 1fr) 1fr;
-  -ms-grid-columns: (minmax(120px, 1fr))[5];
-      grid-template-columns: repeat(5, minmax(120px, 1fr));
+  -ms-grid-columns: (minmax(100px, 1fr))[5];
+      grid-template-columns: repeat(5, minmax(100px, 1fr));
       grid-template-areas: 'head head head head head' 'sidebar main main main main' 'sidebar main main main main' 'sidebar main main main main' 'sidebar footer footer footer footer';
   row-gap: 5px;
   -webkit-column-gap: 5px;
@@ -273,7 +266,8 @@ i {
   -ms-grid-column: 1;
   -ms-grid-column-span: 5;
   grid-area: head;
-  background-color: #15B2EB;
+  background-color: #fff;
+  border-bottom: 1px solid #cecaca;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -285,6 +279,7 @@ i {
           align-items: center;
   padding: 10px 5%;
   position: relative;
+  margin-bottom: -5px;
 }
 
 .sidebar {
@@ -301,7 +296,7 @@ i {
   -ms-grid-column: 2;
   -ms-grid-column-span: 4;
   grid-area: main;
-  background-color: #25586B;
+  background-color: #f6f8f8;
 }
 
 .footer {
@@ -316,8 +311,8 @@ i {
   .container {
     -ms-grid-rows: 0.4fr 1fr 3fr 1fr;
         grid-template-rows: 0.4fr 1fr 3fr 1fr;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: minmax(100px, 1fr);
+        grid-template-columns: minmax(100px, 1fr);
         grid-template-areas: 'head' 'sidebar' 'main' 'footer';
   }
 }

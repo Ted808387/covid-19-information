@@ -1,5 +1,5 @@
 $E00: 100%;
-$peoplenumber: red;
+$peoplenumber: rgb(252, 25, 25);
 
 .sidebar-search{
     width: 100%;
@@ -7,7 +7,7 @@ $peoplenumber: red;
     border: 1px solid gray;
     border-radius: 3px;
     padding-left: 3px;
-    margin-bottom: 5px;
+    margin: 5px 0;
     &:focus{
         outline: 1px solid #0edceb;
     }
@@ -17,7 +17,7 @@ $peoplenumber: red;
     display: flex;
     flex-direction: column;
     width: $E00;
-    height: $E00;
+    height: 93%;
     background-color: #fff;
     overflow: scroll;
     overflow-x: hidden;
@@ -38,7 +38,8 @@ $peoplenumber: red;
 }
 .sidebar-card{
     width: $E00;
-    height: 20%;
+    // height: 20%;
+    font-size: 1.6vw;
     padding: 10px 5px;
     margin-bottom: 5px;
     background-color: $sidebar-color;

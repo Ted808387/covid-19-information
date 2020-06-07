@@ -1,8 +1,10 @@
-$head-color: #15B2EB;
-$nav-color: #118BB8;
+$head-bg-color: #fff;
+$nav-color: #25586B;
+$nav-bg-color: #fff;
 $sidebar-color: #92e3e9;
 $sidebar-hover-color: #2d7c81;
-$main-color: #25586B;
+$main-title-color: #25586B;
+$main-color: rgb(246, 248, 248);
 $main-card-color: #c4f3ed;
 $footer-color: #dff5f2;
 $bcg-color-white: #fff;
@@ -31,7 +33,7 @@ i{
   height: 100vh;
   background-color: #fff;
   grid-template-rows: 0.3fr repeat(3, 1fr) 1fr;
-  grid-template-columns: repeat(5, minmax(120px, 1fr));
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
   grid-template-areas:
   'head head head head head'
   'sidebar main main main main'
@@ -43,12 +45,14 @@ i{
 }
 .header{
   grid-area: head;
-  background-color: $head-color;
+  background-color: $head-bg-color;
+  border-bottom: 1px solid rgb(206, 202, 202);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 5%;
   position: relative;
+  margin-bottom: -5px;
 }
 .sidebar{
   grid-area: sidebar;
@@ -65,7 +69,7 @@ i{
 @media only screen and (max-width: 550px) {
   .container{
     grid-template-rows: 0.4fr 1fr 3fr 1fr;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(100px, 1fr);
     grid-template-areas:
     'head'
     'sidebar'

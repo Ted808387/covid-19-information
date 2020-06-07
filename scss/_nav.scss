@@ -1,14 +1,10 @@
 .nav{
-    width: 300px;
+    width: 150px;
     display: flex;
     justify-content: space-between;
   }
   .nav-item{
-    color: white;
-    transition: 0.3s;
-    &:hover{
-      color: $main-color;
-    }
+    color: $nav-color;
   }
   .nav-burger{
     display: none;
@@ -19,11 +15,7 @@
       width: 20px;
       height: 3px;
       margin-bottom: 3px;
-      background-color: $bcg-color-white;
-      transition: 0.3s;
-    }
-    &:hover span{
-      background-color: $main-color;
+      background-color: $nav-bg-color;
     }
   }
   .popup-nav{

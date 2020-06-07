@@ -18,5 +18,8 @@
     .updateTime{
         @include footer-data();
         right: 10px;
+        .Time{
+            display: inline-block;
+        }
     }
 }

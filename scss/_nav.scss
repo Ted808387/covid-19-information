@@ -15,7 +15,7 @@
       width: 20px;
       height: 3px;
       margin-bottom: 3px;
-      background-color: $nav-bg-color;
+      background-color: $nav-color;
     }
   }
   .popup-nav{
@@ -35,7 +35,7 @@
         color: $nav-color;
         transition: 0.3s;
         &:hover{
-            color: $main-color;
+            color: $popup-hover-color;
         }
         &:last-child{
             border: none;

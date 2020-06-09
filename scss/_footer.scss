@@ -1,7 +1,8 @@
+$footer-time-size: 10px;
+
 @mixin footer-data() {
     font-size: 10px;
     position: absolute;
-    bottom: 5px;
 }
 
 .footer{
@@ -9,17 +10,23 @@
     position: relative;
     .footer-chart{
         padding-bottom: 20px;
+        .chart-title{
+            display: inline-block;
+        }
+        .updateTime{
+            @include footer-data();
+            right: 10px;
+            font-size: $footer-time-size;
+            display: inline-block;
+            .Time{
+                display: inline-block;
+            }
+        }
     }
     .copyright{
         @include footer-data();
         left: 50%;
+        bottom: 5px;
         transform: translateX(-50%);
-    }
-    .updateTime{
-        @include footer-data();
-        right: 10px;
-        .Time{
-            display: inline-block;
-        }
     }
 }

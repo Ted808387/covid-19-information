@@ -38,7 +38,6 @@ $peoplenumber: rgb(252, 25, 25);
 }
 .sidebar-card{
     width: $E00;
-    // height: 20%;
     font-size: 1.6vw;
     padding: 10px 5px;
     margin-bottom: 5px;
@@ -62,4 +61,12 @@ $peoplenumber: rgb(252, 25, 25);
     p:first-child{
         margin: 10px 0;
     }
+}
+@media only screen and (max-width: 550px) {
+    .sidebar-content{
+        height: 250px;
+    }
+    .sidebar-card{
+        font-size: 3vw;
+    }   
 }

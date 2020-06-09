@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEST</title>
     <link rel="stylesheet" href="./dist/style/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
     <script src="./js/all.js" type="module"></script>
 </head>
 <body>
@@ -40,7 +40,7 @@
         </aside>
         <main class="main">
             <div class="main-title">
-                <h2>Country name</h2>
+                <h1>Country name</h1>
             </div>
             <div class="main-content">
                 <div class="main-card">
@@ -73,13 +73,15 @@
         <footer class="footer">
             <div class="footer-chart">
                 <h4 class="chart-title">Global</h4>
-                <canvas id="myChart" height="70%">
-                </canvas>
+                <div class="updateTime">
+                    更新於&nbsp;<p class="Time">updated</p>
+                </div>
+                <div style="height: 200px">
+                    <canvas id="myChart" height="100">
+                    </canvas>
+                </div>
             </div>
             <div class="copyright">Copyright&nbsp;&copy&nbsp;2020&nbsp;Ted&nbsp;design</div>
-            <div class="updateTime">
-                更新於&nbsp;<p class="Time">updated</p>
-            </div>
         </footer>
     </div>
 </body>

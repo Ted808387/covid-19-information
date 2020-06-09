@@ -31,6 +31,8 @@ let controller = (function(model, view) {
             ]
         },
         options: {
+            maintainAspectRatio: false,
+            responsive: true,
             legend:{ 
                 fontColor: 'blue', 
             }, 
@@ -48,7 +50,7 @@ let controller = (function(model, view) {
                     },
                     display: true,
                 }], 
-            },  
+            },
         },
     });
     getDom.ctx.fillStyle = 'black';
@@ -124,8 +126,6 @@ let controller = (function(model, view) {
             data.data = JSON.parse(xhr.responseText);
             view.change(getDom, data.data);
             model.getCountry();
-            // promise;
-            // model.getTime(); // 更新chart時間
             view.updateTime(data.updateTime);
             view.getCountry(getDom, data.Country);
             changeMain();

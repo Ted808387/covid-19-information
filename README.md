@@ -1,4 +1,4 @@
-# covide-19-information Demo
+# Covid-19-information Demo
 [Demo](https://ted808387.github.io/covide-19-information/)
 
 ## Description

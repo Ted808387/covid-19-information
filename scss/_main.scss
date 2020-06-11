@@ -1,13 +1,6 @@
-$title: #fff;
-$main-title: 1.7vw;
-$card-fontsize: 2.2vw;
-$card-quantity: 32px;
-
-
 .main-title{
     display: flex;
     height: 10%;
-    // padding: 5px 0;
     margin: 10px 0;
     justify-content: center;
     align-items: center;
@@ -23,7 +16,7 @@ $card-quantity: 32px;
 .main-card{
     width: 31%;
     height: 43%;
-    // margin-bottom: 2%;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;

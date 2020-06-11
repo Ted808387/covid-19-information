@@ -1,5 +1,6 @@
 export let view = (function() {
     let Dom = {
+        container: '.container',
         sidebar: '.sidebar-content',
         search: '.sidebar-search',
         main: '.main',
@@ -18,6 +19,15 @@ export let view = (function() {
                 ctx: document.getElementById(Dom.myChart).getContext('2d'),
                 search: document.querySelector(Dom.search),
             };
+        },
+        loading: function() {
+            setTimeout(function(){$('.loading_bg').fadeToggle();}, 2000);
+            document.querySelector(Dom.container).insertAdjacentHTML('afterbegin', 
+            `<div class="loading_bg">
+                <div class="loading">
+                    <h3>COVID-19<br>TRACKER</h3>
+                </div>
+            </div>`);
         },
         change: function(getData, data) {
             getData.Card.insertAdjacentHTML('afterbegin', `<div class="sidebar-card"><h4>Global</h4>

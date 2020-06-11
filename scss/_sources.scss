@@ -1,0 +1,14 @@
+.other{
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+    .sources{
+      padding: 1rem;
+      background-color: #e2e8f0;
+      text-align: center;
+      h1{
+        margin-bottom: 1rem;
+      }
+    }
+}

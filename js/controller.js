@@ -132,4 +132,11 @@ let controller = (function(model, view) {
             init();
         }
     };
+    return {
+        loading: function() {
+            view.loading();
+        },
+    }
 })(model, view);
+
+controller.loading();

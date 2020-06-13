@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap");
 .nav {
   width: 150px;
   display: -webkit-box;
@@ -214,11 +215,11 @@
 }
 
 .main-card h1 {
-  font-size: 2.3vw;
+  font-size: 2.2vw;
 }
 
 .main-card h2 {
-  font-size: calc(2.5vw + 10px);
+  font-size: calc(2.3vw + 10px);
   color: #fc1919;
   margin: auto 0;
 }
@@ -384,7 +385,7 @@
           box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Russo One', 'Noto Sans TC', sans-serif;
 }
 
 i {

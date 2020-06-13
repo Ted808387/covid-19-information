@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
 @import '_variable.scss';
 @import '_nav.scss';
 @import '_sidebar.scss';
@@ -13,7 +14,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Russo One', 'Noto Sans TC', sans-serif;
 }
 i{
   font-style: normal;

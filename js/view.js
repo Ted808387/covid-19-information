@@ -21,7 +21,7 @@ export let view = (function() {
             };
         },
         loading: function() {
-            setTimeout(function(){$('.loading_bg').fadeToggle();}, 2000);
+            setTimeout(function(){$('.loading_bg').fadeIn();}, 2000);
         },
         change: function(getData, data) {
             getData.Card.insertAdjacentHTML('afterbegin', `<div class="sidebar-card"><h4>Global</h4>

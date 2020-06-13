@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import '_variable.scss';
+@import '_nav.scss';
+@import '_sidebar.scss';
+@import '_main.scss';
+@import '_footer.scss';
+@import '_sources.scss';
+@import '_loading.scss';
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Russo One', sans-serif;
+}
+i{
+  font-style: normal;
+}
+.container{
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  grid-template-rows: 42px repeat(3, 0.8fr) 1fr;
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
+  grid-template-areas:
+  'head head head head head'
+  'sidebar main main main main'
+  'sidebar main main main main'
+  'sidebar main main main main'
+  'sidebar footer footer footer footer';
+  row-gap: 5px;
+  column-gap: 5px;
+}
+.header{
+  grid-area: head;
+  background-color: $head-bg-color;
+  border-bottom: 1px solid rgb(206, 202, 202);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  position: relative;
+  margin-bottom: -5px;
+}
+.sidebar{
+  grid-area: sidebar;
+  background-color: $bcg-color-white;
+}
+.main{
+  grid-area: main;
+  background-color: $main-color;
+}
+.footer{
+  grid-area: footer;
+  background-color: $footer-color;
+}
+@media only screen and (max-width: 570px) {
+  .container{
+    grid-template-rows: 0.4fr 1fr 3fr 1fr;
+    grid-template-columns: minmax(100px, 1fr);
+    grid-template-areas:
+    'head'
+    'sidebar'
+    'main'
+    'footer'
+  }
+}

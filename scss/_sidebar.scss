@@ -1,0 +1,70 @@
+.sidebar-search{
+    width: 100%;
+    height: 4%;
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding-left: 5px;
+    margin: 5px 0;
+    font-size: 16px;
+    &:focus{
+        outline: 1px solid #0edceb;
+    }
+    &:focus::-webkit-input-placeholder { color:transparent; }
+}
+.sidebar-content{
+    display: flex;
+    flex-direction: column;
+    width: $E00;
+    height: 95%;
+    background-color: #fff;
+    overflow: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar{
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar-track{
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar-thumb{
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: $scroll-color;
+    }
+}
+.sidebar-card{
+    width: $E00;
+    font-size: 1.6vw;
+    padding: 10px 5px;
+    margin-bottom: 5px;
+    background-color: $sidebar-color;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover{
+        background-color: $sidebar-hover-color;
+    }
+    &:last-child{
+        margin-bottom: 0;
+    }
+    .card-left{
+        float: left;
+    }
+    .card-right{
+        float: right;
+        text-align: right;
+        color: $peoplenumber;
+    }
+    p:first-child{
+        margin: 10px 0;
+    }
+}
+@media only screen and (max-width: 570px) {
+    .sidebar-content{
+        height: 250px;
+    }
+    .sidebar-card{
+        font-size: 3vw;
+    }   
+}

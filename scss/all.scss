@@ -57,7 +57,7 @@ i{
   grid-area: footer;
   background-color: $footer-color;
 }
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 580px) {
   .container{
     grid-template-rows: 0.4fr 1fr 3fr 1fr;
     grid-template-columns: minmax(100px, 1fr);

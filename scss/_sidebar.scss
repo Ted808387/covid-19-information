@@ -36,7 +36,7 @@
 }
 .sidebar-card{
     width: $E00;
-    font-size: 1.6vw;
+    font-size: $sidebar-fontsize;
     padding: 10px 5px;
     margin-bottom: 5px;
     background-color: $sidebar-color;
@@ -60,7 +60,7 @@
         margin: 10px 0;
     }
 }
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 580px) {
     .sidebar-content{
         height: 250px;
     }

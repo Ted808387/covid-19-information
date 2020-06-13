@@ -14,7 +14,7 @@ function popupNavbar() {
 };
 
 window.addEventListener('resize', () => {
-    if(document.body.clientWidth < 570) {
+    if(document.body.clientWidth < 580) {
         nav.style.display = 'none';
         navBurger.style.display = 'block';
     } else {

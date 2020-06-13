@@ -115,7 +115,7 @@
 
 .sidebar-card {
   width: 100%;
-  font-size: 1.6vw;
+  font-size: 1.2vw;
   padding: 10px 5px;
   margin-bottom: 5px;
   background-color: #92e3e9;
@@ -147,7 +147,7 @@
   margin: 10px 0;
 }
 
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 580px) {
   .sidebar-content {
     height: 250px;
   }
@@ -223,7 +223,7 @@
   margin: auto 0;
 }
 
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 580px) {
   .main-title {
     font-size: 12px;
   }
@@ -457,7 +457,7 @@ i {
   background-color: #dff5f2;
 }
 
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 580px) {
   .container {
     -ms-grid-rows: 0.4fr 1fr 3fr 1fr;
         grid-template-rows: 0.4fr 1fr 3fr 1fr;

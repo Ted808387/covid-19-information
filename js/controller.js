@@ -95,12 +95,14 @@ let controller = (function(model, view) {
         });  
     };
 
-    let promise = new Promise((resolve, reject) => {
+    let getTime = new Promise((resolve, reject) => { // 更新chart時間
         model.getTime();
-        resolve(); // 更新chart時間
+        resolve();
     });
-    promise.then(() => {
-        // console.log(555)
+    getTime.then(() => {
+        setTimeout(() => {
+            view.updateTime(data.updateTime);
+        }, 1000);
     });
 
     getDom.search.addEventListener('input', function(e) {
@@ -126,7 +128,6 @@ let controller = (function(model, view) {
             data.data = JSON.parse(xhr.responseText);
             view.change(getDom, data.data);
             model.getCountry();
-            view.updateTime(data.updateTime);
             view.getCountry(getDom, data.Country);
             changeMain();
             init();
